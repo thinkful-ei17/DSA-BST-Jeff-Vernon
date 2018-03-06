@@ -24,8 +24,8 @@ function findMaxHeight(BinarySearchTree) {
 
 
 /*     1
-    2 --- 7
-     3  6  9
+  -1 --- 7
+ 22  3  6  9
             11
 
 
