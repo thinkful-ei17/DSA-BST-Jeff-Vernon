@@ -1,3 +1,5 @@
+'use strict';
+
 const BinarySearchTree = require('./bst');
 
 function isItBst(BinarySearchTree) {
@@ -17,10 +19,7 @@ function isItBst(BinarySearchTree) {
   //if i have both
   if (left && right) {
     if (key > BinarySearchTree.left.key && key < BinarySearchTree.right.key) {
-      console.log('========== TRANVERSING BOTH =========', key);
-      isItBst(BinarySearchTree.left); //goes to 2
-      isItBst(BinarySearchTree.right); //goes to 5
-
+      console.log('========== TRAVERSING BOTH =========', key);
       return isItBst(BinarySearchTree.left) && isItBst(BinarySearchTree.right);
     }
 
@@ -28,20 +27,18 @@ function isItBst(BinarySearchTree) {
       console.log('key > left && key < right came out false');
       return false;
     }
-}
+  }
   //if i dont have a left
   else if (right) {
     if(key < BinarySearchTree.right.key) {
       console.log('========== TRANVERSING RIGHT =========', key);
-
       return isItBst(BinarySearchTree.right);
     }
-
     else {
       console.log('======= KEY < right.key');
       return false;
     }
-}
+  }
 
   //if i dont have a right
   else if(left) {
@@ -49,12 +46,11 @@ function isItBst(BinarySearchTree) {
       console.log('========== TRANVERSING LEFT =========', key);
       return isItBst(BinarySearchTree.left);
     }
-
     else {
       console.log('======= KEY > right.left');
       return false;
     }
-}
+  }
 
   //if i dont have any; the leaf node!
   else if(!BinarySearchTree.right && !BinarySearchTree.left) {

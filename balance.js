@@ -21,7 +21,6 @@ function isTreeBalanced(BinarySearchTree) {
       return 'Tree is balanced!';
     }
   }
-
   return rightHeight > leftHeight ? rightHeight : leftHeight;
 }
 
