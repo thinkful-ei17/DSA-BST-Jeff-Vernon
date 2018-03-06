@@ -1,3 +1,5 @@
+'use strict';
+
 const BinarySearchTree = require('./bst');
 
 function findMaxHeight(BinarySearchTree) {
