@@ -51,7 +51,7 @@ class BinarySearchTree {
     else if (key > this.key && this.right) {
       return this.right.find(key);
     }
-  
+
     else {
       throw new Error('Key error');
     }
@@ -125,7 +125,9 @@ class BinarySearchTree {
   }
 }
 
+module.exports = BinarySearchTree;
 
+/*
 const main = () => {
   const test = new BinarySearchTree();
   test.insert(3);
@@ -140,3 +142,4 @@ const main = () => {
 };
 
 main();
+*/
