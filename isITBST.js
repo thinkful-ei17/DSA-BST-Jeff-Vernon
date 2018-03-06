@@ -31,7 +31,7 @@ function isItBst(BinarySearchTree) {
   //if i dont have a left
   else if (right) {
     if(key < BinarySearchTree.right.key) {
-      console.log('========== TRANVERSING RIGHT =========', key);
+      console.log('========== TRAVERSING RIGHT =========', key);
       return isItBst(BinarySearchTree.right);
     }
     else {
